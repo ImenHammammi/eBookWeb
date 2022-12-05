@@ -1,6 +1,6 @@
 ﻿using eBook.DataAccess.Repository.IRepository;
 using eBook.Models;
-
+using eBook.Utility;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System.Data;
@@ -8,7 +8,7 @@ using System.Data;
 namespace eBookWeb.Areas.Admin.Controllers
 {
     [Area("Admin")]
-   // [Authorize(Roles = SD.Role_Admin)]
+   [Authorize(Roles = SD.Role_Admin)]
     public class CompanyController : Controller
     {
         private readonly IUnitOfWork _unitOfWork;
